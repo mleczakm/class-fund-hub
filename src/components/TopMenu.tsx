@@ -5,8 +5,7 @@ import { Bell, Search, User } from "lucide-react";
 const links = [
   { to: "/", label: "Pulpit" },
   { to: "/payments", label: "Płatności" },
-  { to: "/students", label: "Uczniowie" },
-  { to: "/reports", label: "Raporty" },
+  { to: "/login", label: "Logowanie" },
 ] as const;
 
 export function TopMenu() {
