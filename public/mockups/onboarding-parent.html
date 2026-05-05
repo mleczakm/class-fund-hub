@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pierwsze logowanie — Dołącz do klasy · Classy Cash</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app-bg"></div>
+
+<header class="topmenu">
+  <div class="container inner">
+    <a class="brand" href="index.html"><span class="brand-mark">CC</span><span class="brand-name">Classy<span>Cash</span></span></a>
+    <nav class="nav"><span style="color:var(--muted);font-size:13px">Pierwsze logowanie · Rodzic</span></nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="wizard">
+    <div class="steps">
+      <div class="step done"><span class="num">✓</span><span class="label">Konto</span><span class="sub">Utworzone</span></div>
+      <div class="step active"><span class="num">2</span><span class="label">Klasa</span><span class="sub">Kod dostępu</span></div>
+      <div class="step"><span class="num">3</span><span class="label">Dzieci</span><span class="sub">Lista uczniów</span></div>
+      <div class="step"><span class="num">4</span><span class="label">Powiadomienia</span><span class="sub">Preferencje</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h2 class="section-title">Witaj w Classy Cash! 🎒</h2>
+        <p class="section-sub">Dołącz do klasy swojego dziecka i miej finanse zawsze pod kontrolą.</p>
+
+        <h3 style="font-size:15px;margin:24px 0 12px">Dołącz do klasy</h3>
+        <div class="input-row">
+          <div class="form-group">
+            <label>Kod klasy od skarbnika</label>
+            <input class="input" placeholder="np. 5B-2026-AX9F" />
+            <div class="hint">Otrzymasz go od skarbnika lub wychowawcy.</div>
+          </div>
+          <div class="form-group">
+            <label>Klasa wykryta</label>
+            <input class="input" value="Klasa 5B · SP nr 3" disabled style="background:var(--secondary-soft);color:#1d7a5f;font-weight:600" />
+          </div>
+        </div>
+
+        <h3 style="font-size:15px;margin:32px 0 12px">Twoje dane</h3>
+        <div class="input-row">
+          <div class="form-group">
+            <label>Imię i nazwisko</label>
+            <input class="input" placeholder="np. Katarzyna Nowak" />
+          </div>
+          <div class="form-group">
+            <label>Telefon (opcjonalnie)</label>
+            <input class="input" placeholder="+48 600 000 000" />
+          </div>
+        </div>
+
+        <h3 style="font-size:15px;margin:32px 0 12px">Twoje dzieci w tej klasie</h3>
+        <p class="section-sub" style="margin-bottom:8px">Dodaj wszystkie dzieci, które uczęszczają do klasy 5B. Wpłaty będą powiązane z każdym z nich osobno.</p>
+
+        <div class="children-list">
+          <div class="child-row">
+            <input class="input" placeholder="Imię dziecka" value="Julia" />
+            <input class="input" placeholder="Nazwisko" value="Nowak" />
+            <select class="select"><option>nr 12 w dzienniku</option><option>nr 13</option><option>nr 14</option></select>
+            <button class="icon-btn" title="Usuń">✕</button>
+          </div>
+          <div class="child-row">
+            <input class="input" placeholder="Imię dziecka" value="Kacper" />
+            <input class="input" placeholder="Nazwisko" value="Nowak" />
+            <select class="select"><option>nr 15 w dzienniku</option><option>nr 16</option></select>
+            <button class="icon-btn" title="Usuń">✕</button>
+          </div>
+        </div>
+        <button class="add-row-btn" type="button">+ Dodaj kolejne dziecko</button>
+
+        <h3 style="font-size:15px;margin:32px 0 12px">Powiadomienia</h3>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <label class="checkbox"><input type="checkbox" checked /> E-mail o nowych zbiórkach</label>
+          <label class="checkbox"><input type="checkbox" checked /> Przypomnienia o terminach płatności</label>
+          <label class="checkbox"><input type="checkbox" /> Tygodniowe podsumowanie aktywności klasy</label>
+        </div>
+
+        <div class="actions-row">
+          <button class="btn btn-ghost">← Wstecz</button>
+          <div style="display:flex;gap:10px">
+            <button class="btn btn-outline">Zapisz wersję roboczą</button>
+            <button class="btn btn-primary">Dołącz do klasy →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site">© 2026 Classy Cash · Konfiguracja konta rodzica</footer>
+</body>
+</html>
