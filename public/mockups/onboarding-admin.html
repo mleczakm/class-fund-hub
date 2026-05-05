@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pierwsze logowanie — Konfiguracja klasy · Classy Cash</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app-bg"></div>
+
+<header class="topmenu">
+  <div class="container inner">
+    <a class="brand" href="index.html"><span class="brand-mark">CC</span><span class="brand-name">Classy<span>Cash</span></span></a>
+    <nav class="nav">
+      <span style="color:var(--muted);font-size:13px">Pierwsze logowanie · Skarbnik klasy</span>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="wizard">
+    <div class="steps">
+      <div class="step done"><span class="num">✓</span><span class="label">Konto</span><span class="sub">Utworzone</span></div>
+      <div class="step active"><span class="num">2</span><span class="label">Klasa</span><span class="sub">Nazwa i rok</span></div>
+      <div class="step"><span class="num">3</span><span class="label">Płatności</span><span class="sub">BLIK i konto</span></div>
+      <div class="step"><span class="num">4</span><span class="label">Powiadomienia</span><span class="sub">Skrzynka Gmail</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h2 class="section-title">Witaj w Classy Cash 👋</h2>
+        <p class="section-sub">Skonfigurujmy aplikację dla Twojej klasy. Zajmie to mniej niż 5 minut — wszystkie ustawienia możesz później zmienić.</p>
+
+        <h3 style="font-size:15px;margin:24px 0 12px">Pierwsza klasa</h3>
+
+        <div class="input-row">
+          <div class="form-group">
+            <label>Nazwa klasy</label>
+            <input class="input" placeholder="np. 5B" value="5B" />
+          </div>
+          <div class="form-group">
+            <label>Rok szkolny</label>
+            <select class="select">
+              <option>2025/2026</option>
+              <option>2026/2027</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="input-row">
+          <div class="form-group">
+            <label>Szkoła</label>
+            <input class="input" placeholder="np. SP nr 3 im. Jana Pawła II" />
+          </div>
+          <div class="form-group">
+            <label>Liczba uczniów</label>
+            <input class="input" type="number" min="1" value="28" />
+          </div>
+        </div>
+
+        <h3 style="font-size:15px;margin:32px 0 12px">Ustawienia aplikacji</h3>
+
+        <div class="input-row">
+          <div class="form-group">
+            <label>Nazwa aplikacji (widoczna dla rodziców)</label>
+            <input class="input" value="Klasa 5B — Kasa" />
+            <div class="hint">Pojawi się w nagłówku i e-mailach do rodziców.</div>
+          </div>
+          <div class="form-group">
+            <label>Waluta</label>
+            <select class="select"><option>PLN — złoty polski</option><option>EUR</option></select>
+          </div>
+        </div>
+
+        <h3 style="font-size:15px;margin:32px 0 12px">Metody płatności</h3>
+
+        <div class="input-row">
+          <div class="form-group">
+            <label>Numer telefonu BLIK</label>
+            <input class="input" placeholder="+48 600 000 000" />
+            <div class="hint">Używany przez rodziców do szybkich wpłat BLIK na telefon.</div>
+          </div>
+          <div class="form-group">
+            <label>Imię i nazwisko odbiorcy BLIK</label>
+            <input class="input" placeholder="Anna Kowalska" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Numer rachunku bankowego (IBAN)</label>
+          <input class="input" placeholder="PL00 0000 0000 0000 0000 0000 0000" />
+          <div class="hint">Wyświetlany rodzicom przy każdej zbiórce jako alternatywa do BLIK.</div>
+        </div>
+
+        <h3 style="font-size:15px;margin:32px 0 12px">Powiadomienia o wpłatach</h3>
+        <p class="section-sub" style="margin-bottom:16px">Aby automatycznie księgować wpłaty, podłącz skrzynkę Gmail, na którą bank wysyła powiadomienia. Hasło jest szyfrowane i używane wyłącznie do odczytu.</p>
+
+        <div class="input-row">
+          <div class="form-group">
+            <label>Adres Gmail</label>
+            <div class="input-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+              <input class="input" type="email" placeholder="kasa.klasy.5b@gmail.com" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Hasło aplikacji</label>
+            <div class="input-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <input class="input" type="password" placeholder="xxxx xxxx xxxx xxxx" />
+            </div>
+            <div class="hint">Wygeneruj „App Password" w ustawieniach Google → Bezpieczeństwo.</div>
+          </div>
+        </div>
+
+        <label class="checkbox" style="margin-top:6px"><input type="checkbox" checked /> Filtruj wiadomości od mojego banku (zalecane)</label>
+
+        <div class="actions-row">
+          <button class="btn btn-ghost">← Wstecz</button>
+          <div style="display:flex;gap:10px">
+            <button class="btn btn-outline">Pomiń na razie</button>
+            <button class="btn btn-primary">Zapisz i przejdź do pulpitu →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site">© 2026 Classy Cash · Konfiguracja konta administratora</footer>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Płatności — Classy Cash</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app-bg"></div>
+
+<header class="topmenu">
+  <div class="container inner">
+    <a class="brand" href="index.html"><span class="brand-mark">CC</span><span class="brand-name">Classy<span>Cash</span></span></a>
+    <nav class="nav">
+      <a href="index.html">Pulpit</a>
+      <a href="payments.html" class="active">Płatności</a>
+      <a href="onboarding-admin.html">Konfiguracja</a>
+      <a href="login.html" class="btn btn-outline" style="padding:6px 14px">Zaloguj</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container" style="padding-top:32px;padding-bottom:60px">
+  <div style="display:flex;justify-content:space-between;align-items:end;margin-bottom:24px;flex-wrap:wrap;gap:16px">
+    <div>
+      <h1 class="section-title">Płatności</h1>
+      <p class="section-sub">Wszystkie wpłaty i wydatki klasy 5B w jednym miejscu.</p>
+    </div>
+    <div style="display:flex;gap:10px">
+      <button class="btn btn-outline">Eksport CSV</button>
+      <button class="btn btn-primary">+ Nowa płatność</button>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:20px">
+    <div class="card-body" style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+      <div class="input-icon" style="flex:1;min-width:240px">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input class="input" type="text" placeholder="Szukaj po nazwisku, tytule, kwocie..." />
+      </div>
+      <button class="btn btn-outline">Wszystkie</button>
+      <button class="btn btn-ghost">Wpływy</button>
+      <button class="btn btn-ghost">Wydatki</button>
+      <button class="btn btn-ghost">Zaległe</button>
+    </div>
+  </div>
+
+  <div class="card" style="overflow:hidden">
+    <table class="table">
+      <thead>
+        <tr><th>Data</th><th>Osoba / Tytuł</th><th>Zbiórka</th><th>Status</th><th style="text-align:right">Kwota</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>05.05.2026</td><td><strong>Anna Kowalska</strong><div style="color:var(--muted);font-size:12px">BLIK · ref. 8821</div></td><td>Wycieczka do Krakowa</td><td><span class="badge badge-success">Opłacone</span></td><td style="text-align:right" class="amount pos">+180,00 zł</td></tr>
+        <tr><td>04.05.2026</td><td><strong>Piotr Nowak</strong><div style="color:var(--muted);font-size:12px">Przelew</div></td><td>Składka — listopad</td><td><span class="badge badge-success">Opłacone</span></td><td style="text-align:right" class="amount pos">+50,00 zł</td></tr>
+        <tr><td>04.05.2026</td><td><strong>Maria Wiśniewska</strong><div style="color:var(--muted);font-size:12px">BLIK</div></td><td>Prezent dla wych.</td><td><span class="badge badge-success">Opłacone</span></td><td style="text-align:right" class="amount pos">+25,00 zł</td></tr>
+        <tr><td>03.05.2026</td><td><strong>Jakub Lewandowski</strong></td><td>Wycieczka do Krakowa</td><td><span class="badge badge-warning">Oczekuje</span></td><td style="text-align:right" class="amount">180,00 zł</td></tr>
+        <tr><td>02.05.2026</td><td><strong>Karolina Zając</strong></td><td>Składka — listopad</td><td><span class="badge badge-danger">Zaległe</span></td><td style="text-align:right" class="amount">50,00 zł</td></tr>
+        <tr><td>01.05.2026</td><td><strong>Pizzeria Bella</strong><div style="color:var(--muted);font-size:12px">Faktura FV/2026/04/12</div></td><td>Pizza Day</td><td><span class="badge badge-success">Opłacone</span></td><td style="text-align:right" class="amount neg">−320,00 zł</td></tr>
+        <tr><td>28.04.2026</td><td><strong>Empik</strong></td><td>Książki konkursowe</td><td><span class="badge badge-success">Opłacone</span></td><td style="text-align:right" class="amount neg">−145,90 zł</td></tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+
+<footer class="site">© 2026 Classy Cash · Mockup</footer>
+</body>
+</html>
