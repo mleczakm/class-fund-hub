@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Modale — Classy Cash</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app-bg"></div>
+
+<header class="topmenu">
+  <div class="container inner">
+    <a class="brand" href="index.html"><span class="brand-mark">CC</span><span class="brand-name">Classy<span>Cash</span></span></a>
+    <nav class="nav">
+      <a href="index.html">Pulpit</a>
+      <a href="payments.html">Płatności</a>
+      <a href="modals.html" class="active">Modale</a>
+      <a href="settings-admin.html">Ustawienia</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container" style="padding: 32px 24px 80px">
+  <h1 style="font-size:28px;margin-bottom:6px">Modale i okna dialogowe</h1>
+  <p style="color:var(--muted);margin-bottom:40px">Zestaw kluczowych formularzy używanych w aplikacji. Każdy wyświetlany jest jako modal nakładający się na widok pulpitu lub listy.</p>
+
+  <div class="modal-grid" style="row-gap:60px">
+
+    <!-- 1. New collection -->
+    <div class="modal" data-label="Nowa zbiórka">
+      <div class="modal-head">
+        <h3>➕ Nowa zbiórka</h3>
+        <button class="close">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label>Nazwa zbiórki</label>
+          <input class="input" placeholder="np. Wycieczka do Krakowa" />
+        </div>
+        <div class="input-row">
+          <div class="form-group">
+            <label>Kwota od ucznia</label>
+            <input class="input" placeholder="180,00" />
+          </div>
+          <div class="form-group">
+            <label>Waluta</label>
+            <select class="select"><option>PLN</option><option>EUR</option></select>
+          </div>
+        </div>
+        <div class="input-row">
+          <div class="form-group">
+            <label>Termin wpłat</label>
+            <input class="input" type="date" />
+          </div>
+          <div class="form-group">
+            <label>Kategoria</label>
+            <select class="select"><option>Wycieczka</option><option>Składka</option><option>Prezent</option><option>Inne</option></select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Opis (opcjonalnie)</label>
+          <textarea class="textarea" rows="3" placeholder="Krótka informacja dla rodziców…"></textarea>
+        </div>
+        <label class="checkbox"><input type="checkbox" checked /> Wyślij powiadomienie e-mail do rodziców</label>
+      </div>
+      <div class="modal-foot">
+        <button class="btn btn-ghost">Anuluj</button>
+        <button class="btn btn-primary">Utwórz zbiórkę</button>
+      </div>
+    </div>
+
+    <!-- 2. New payment -->
+    <div class="modal" data-label="Nowa płatność">
+      <div class="modal-head">
+        <h3>💸 Dodaj płatność</h3>
+        <button class="close">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="input-row">
+          <div class="form-group">
+            <label>Typ</label>
+            <select class="select"><option>Wpłata (przychód)</option><option>Wydatek</option></select>
+          </div>
+          <div class="form-group">
+            <label>Kwota</label>
+            <input class="input" placeholder="50,00 zł" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Zbiórka</label>
+          <select class="select">
+            <option>Składka klasowa — listopad</option>
+            <option>Wycieczka do Krakowa</option>
+            <option>Prezent dla wychowawczyni</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Uczeń / dziecko</label>
+          <select class="select">
+            <option>— wybierz —</option>
+            <option>Anna Kowalska</option>
+            <option>Piotr Nowak</option>
+            <option>Maria Wiśniewska</option>
+          </select>
+        </div>
+        <div class="input-row">
+          <div class="form-group">
+            <label>Data</label>
+            <input class="input" type="date" />
+          </div>
+          <div class="form-group">
+            <label>Metoda</label>
+            <select class="select"><option>BLIK</option><option>Przelew</option><option>Gotówka</option></select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Notatka</label>
+          <input class="input" placeholder="np. zaległość za październik" />
+        </div>
+      </div>
+      <div class="modal-foot">
+        <button class="btn btn-ghost">Anuluj</button>
+        <button class="btn btn-primary">Zapisz płatność</button>
+      </div>
+    </div>
+
+    <!-- 3. Add / moderate user -->
+    <div class="modal" data-label="Dodanie / moderacja użytkownika">
+      <div class="modal-head">
+        <h3>👤 Dodaj lub moderuj użytkownika</h3>
+        <button class="close">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="input-row">
+          <div class="form-group">
+            <label>Imię i nazwisko</label>
+            <input class="input" value="Anna Kowalska" />
+          </div>
+          <div class="form-group">
+            <label>E-mail</label>
+            <input class="input" type="email" value="anna.k@example.com" />
+          </div>
+        </div>
+        <div class="input-row">
+          <div class="form-group">
+            <label>Rola</label>
+            <select class="select">
+              <option>Rodzic</option>
+              <option>Skarbnik</option>
+              <option selected>Administrator</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Status</label>
+            <select class="select">
+              <option>Aktywny</option>
+              <option>Zaproszony</option>
+              <option>Zawieszony</option>
+            </select>
+          </div>
+        </div>
+        <label class="checkbox"><input type="checkbox" checked /> Wyślij zaproszenie na e-mail</label>
+        <div style="margin-top:18px;padding:14px;border:1px solid var(--border);border-radius:12px;background:#fafbfd">
+          <strong style="font-size:13px">Akcje moderacyjne</strong>
+          <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
+            <button class="btn btn-outline" style="font-size:12px;padding:6px 12px">Resetuj hasło</button>
+            <button class="btn btn-outline" style="font-size:12px;padding:6px 12px">Zawieś konto</button>
+            <button class="btn btn-outline" style="font-size:12px;padding:6px 12px;color:var(--danger);border-color:var(--danger)">Usuń użytkownika</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-foot">
+        <button class="btn btn-ghost">Anuluj</button>
+        <button class="btn btn-primary">Zapisz zmiany</button>
+      </div>
+    </div>
+
+    <!-- 4. Add / remove child + link -->
+    <div class="modal" data-label="Dziecko i powiązanie z rodzicem">
+      <div class="modal-head">
+        <h3>🧒 Dziecko · powiązanie z użytkownikiem</h3>
+        <button class="close">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="input-row">
+          <div class="form-group">
+            <label>Imię dziecka</label>
+            <input class="input" value="Janek" />
+          </div>
+          <div class="form-group">
+            <label>Nazwisko</label>
+            <input class="input" value="Kowalski" />
+          </div>
+        </div>
+        <div class="input-row">
+          <div class="form-group">
+            <label>Klasa</label>
+            <select class="select"><option>5B</option><option>6A</option></select>
+          </div>
+          <div class="form-group">
+            <label>Numer w dzienniku</label>
+            <input class="input" type="number" value="12" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Powiąż z rodzicem (użytkownik)</label>
+          <select class="select">
+            <option>Anna Kowalska (anna.k@example.com)</option>
+            <option>Piotr Nowak (p.nowak@example.com)</option>
+            <option>+ Zaproś nowego rodzica…</option>
+          </select>
+          <div class="hint">Rodzic zobaczy płatności swojego dziecka po zalogowaniu.</div>
+        </div>
+
+        <strong style="font-size:13px;display:block;margin-top:14px">Aktualnie powiązani rodzice</strong>
+        <div class="children-list">
+          <div class="child-row" style="grid-template-columns:1fr 120px 36px">
+            <div class="row-user"><span class="avatar">AK</span>Anna Kowalska <span class="role-pill role-parent" style="margin-left:8px">Rodzic</span></div>
+            <span style="color:var(--muted);font-size:12px">główny kontakt</span>
+            <button class="icon-btn" title="Odepnij">×</button>
+          </div>
+          <div class="child-row" style="grid-template-columns:1fr 120px 36px">
+            <div class="row-user"><span class="avatar" style="background:var(--accent);color:#3a2a00">MK</span>Marek Kowalski</div>
+            <span style="color:var(--muted);font-size:12px">drugi rodzic</span>
+            <button class="icon-btn" title="Odepnij">×</button>
+          </div>
+        </div>
+        <button class="add-row-btn">+ Dodaj kolejnego rodzica</button>
+      </div>
+      <div class="modal-foot">
+        <button class="btn btn-outline" style="color:var(--danger);border-color:var(--danger);margin-right:auto">Usuń dziecko</button>
+        <button class="btn btn-ghost">Anuluj</button>
+        <button class="btn btn-primary">Zapisz</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site">© 2026 Classy Cash · Modale</footer>
+</body>
+</html>

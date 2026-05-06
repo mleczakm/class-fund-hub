@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Menu użytkownika — Classy Cash</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app-bg"></div>
+
+<header class="topmenu">
+  <div class="container inner">
+    <a class="brand" href="index.html"><span class="brand-mark">CC</span><span class="brand-name">Classy<span>Cash</span></span></a>
+    <nav class="nav" style="gap:14px">
+      <a href="index.html">Pulpit</a>
+      <a href="payments.html">Płatności</a>
+      <a href="modals.html">Modale</a>
+      <a href="settings-admin.html">Ustawienia</a>
+
+      <div class="menu-wrap">
+        <button class="bell" title="Powiadomienia"><span class="dot"></span>🔔</button>
+      </div>
+
+      <div class="menu-wrap">
+        <button class="user-trigger">AK</button>
+
+        <!-- Otwarte menu rozwijane -->
+        <div class="dropdown">
+          <div class="dd-header">
+            <strong>Anna Kowalska</strong>
+            <span>anna.k@example.com</span>
+            <span class="role-pill role-treasurer" style="margin-top:6px;display:inline-block">Skarbnik · Klasa 5B</span>
+          </div>
+          <a href="settings-user.html">👤 Mój profil</a>
+          <a href="settings-user.html">⚙️ Ustawienia konta</a>
+          <a href="modals.html">🧒 Moje dzieci</a>
+          <a href="notifications.html">🔔 Powiadomienia <span class="kbd-link" style="margin-left:auto">3</span></a>
+          <hr/>
+          <a href="settings-admin.html">🛡️ Panel administratora</a>
+          <a href="onboarding-admin.html">🏫 Przełącz klasę</a>
+          <hr/>
+          <a href="#">❓ Pomoc i wsparcie</a>
+          <button class="danger">🚪 Wyloguj się</button>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="container" style="padding: 32px 24px 80px; min-height: 60vh">
+  <h1 style="font-size:24px">Menu użytkownika (rozwinięte)</h1>
+  <p style="color:var(--muted)">Kliknij ikonę avatara w prawym górnym rogu — pokazane jest stale otwarte dla podglądu.</p>
+</main>
+
+<footer class="site">© 2026 Classy Cash</footer>
+</body>
+</html>
