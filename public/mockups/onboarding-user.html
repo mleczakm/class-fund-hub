@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pierwsze logowanie rodzica — Classy Cash</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app-bg"></div>
+
+<header class="topmenu">
+  <div class="container inner">
+    <a class="brand" href="index.html"><span class="brand-mark">CC</span><span class="brand-name">Classy<span>Cash</span></span></a>
+    <span style="color:var(--muted);font-size:13px">Pierwsze logowanie · Rodzic</span>
+  </div>
+</header>
+
+<main class="container">
+  <div class="wizard">
+    <div class="steps">
+      <div class="step done"><span class="num">✓</span><span class="label">Konto</span><span class="sub">Utworzone</span></div>
+      <div class="step done"><span class="num">✓</span><span class="label">Klasa</span><span class="sub">Dołączono do 5B</span></div>
+      <div class="step active"><span class="num">3</span><span class="label">Dzieci</span><span class="sub">Wymagane</span></div>
+      <div class="step"><span class="num">4</span><span class="label">Powiadomienia</span><span class="sub">Preferencje</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h2 class="section-title">Witaj w klasie 5B 👋</h2>
+        <p class="section-sub">Aby kontynuować, dodaj przynajmniej jedno dziecko. Skarbnik powiąże je z odpowiednimi zbiórkami i zobaczysz tylko Twoje płatności.</p>
+
+        <h3 style="font-size:15px;margin:24px 0 12px">Twoje dzieci w tej klasie</h3>
+
+        <div class="children-list">
+          <div class="child-row">
+            <input class="input" placeholder="Imię" value="Janek" />
+            <input class="input" placeholder="Nazwisko" value="Kowalski" />
+            <input class="input" placeholder="Nr w dzienniku" value="12" />
+            <button class="icon-btn" title="Usuń">×</button>
+          </div>
+          <div class="child-row">
+            <input class="input" placeholder="Imię" />
+            <input class="input" placeholder="Nazwisko" />
+            <input class="input" placeholder="Nr w dzienniku" />
+            <button class="icon-btn" title="Usuń">×</button>
+          </div>
+        </div>
+        <button class="add-row-btn">+ Dodaj kolejne dziecko</button>
+
+        <div style="margin-top:24px;padding:14px;border-radius:12px;background:var(--secondary-soft);color:#1d7a5f;font-size:13px">
+          ℹ️ Jeśli drugi rodzic również ma konto Classy Cash, skarbnik połączy oba konta z dzieckiem — wystarczy podać te same dane.
+        </div>
+
+        <h3 style="font-size:15px;margin:32px 0 12px">Kontakt</h3>
+        <div class="input-row">
+          <div class="form-group">
+            <label>Numer telefonu</label>
+            <input class="input" placeholder="+48 600 000 000" />
+            <div class="hint">Używany do potwierdzeń BLIK i pilnych powiadomień.</div>
+          </div>
+          <div class="form-group">
+            <label>Preferowany sposób kontaktu</label>
+            <select class="select"><option>E-mail</option><option>SMS</option><option>Oba</option></select>
+          </div>
+        </div>
+
+        <label class="checkbox" style="margin-top:6px"><input type="checkbox" checked /> Akceptuję regulamin i politykę prywatności</label>
+
+        <div class="actions-row">
+          <button class="btn btn-ghost">← Wstecz</button>
+          <button class="btn btn-primary">Zakończ konfigurację →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site">© 2026 Classy Cash · Konfiguracja konta rodzica</footer>
+</body>
+</html>

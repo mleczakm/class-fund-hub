@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Powiadomienia — Classy Cash</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app-bg"></div>
+
+<header class="topmenu">
+  <div class="container inner">
+    <a class="brand" href="index.html"><span class="brand-mark">CC</span><span class="brand-name">Classy<span>Cash</span></span></a>
+    <nav class="nav" style="gap:14px">
+      <a href="index.html">Pulpit</a>
+      <a href="payments.html">Płatności</a>
+      <a href="modals.html">Modale</a>
+      <a href="notifications.html" class="active">Powiadomienia</a>
+
+      <div class="menu-wrap">
+        <button class="bell" title="Powiadomienia"><span class="dot"></span>🔔</button>
+
+        <!-- Panel powiadomień otwarty -->
+        <div class="dropdown notif-panel">
+          <div class="dd-header" style="display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <strong>Powiadomienia</strong>
+              <span>3 nowe · klasa 5B</span>
+            </div>
+            <a href="#" style="color:var(--secondary);font-size:12px;font-weight:600">Oznacz jako przeczytane</a>
+          </div>
+
+          <div style="position:relative">
+            <div class="notif-item success">
+              <span class="ico">✓</span>
+              <div style="flex:1">
+                <p><strong>Anna Kowalska</strong> wpłaciła 180 zł na <em>Wycieczka do Krakowa</em>.</p>
+                <div class="when">10 minut temu</div>
+              </div>
+              <span class="notif-unread"></span>
+            </div>
+          </div>
+
+          <div style="position:relative">
+            <div class="notif-item warn">
+              <span class="ico">⚠</span>
+              <div style="flex:1">
+                <p>Termin wpłaty na <strong>Składka — listopad</strong> mija jutro. 2 osoby zalegają.</p>
+                <div class="when">2 godziny temu</div>
+              </div>
+              <span class="notif-unread"></span>
+            </div>
+          </div>
+
+          <div style="position:relative">
+            <div class="notif-item info">
+              <span class="ico">@</span>
+              <div style="flex:1">
+                <p>Otrzymano e-mail z banku — automatycznie zaksięgowano <strong>+50 zł</strong>.</p>
+                <div class="when">5 godzin temu</div>
+              </div>
+              <span class="notif-unread"></span>
+            </div>
+          </div>
+
+          <div class="notif-item info">
+            <span class="ico">👤</span>
+            <div style="flex:1">
+              <p>Nowy rodzic <strong>Marek Wiśniewski</strong> dołączył do klasy.</p>
+              <div class="when">wczoraj</div>
+            </div>
+          </div>
+
+          <div class="notif-item warn">
+            <span class="ico">💸</span>
+            <div style="flex:1">
+              <p>Skarbnik dodał wydatek <strong>−320 zł</strong> (pizza na zakończenie semestru).</p>
+              <div class="when">2 dni temu</div>
+            </div>
+          </div>
+
+          <hr/>
+          <a href="#" style="justify-content:center;color:var(--secondary);font-weight:600">Zobacz wszystkie powiadomienia →</a>
+        </div>
+      </div>
+
+      <button class="user-trigger">AK</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container" style="padding: 32px 24px 80px; min-height: 60vh">
+  <h1 style="font-size:24px">Panel powiadomień</h1>
+  <p style="color:var(--muted)">Powiadomienia dotyczą wpłat, zaległości, automatycznego księgowania z Gmail oraz zmian użytkowników.</p>
+</main>
+
+<footer class="site">© 2026 Classy Cash</footer>
+</body>
+</html>

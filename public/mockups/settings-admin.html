@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Panel skarbnika — Classy Cash</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app-bg"></div>
+
+<header class="topmenu">
+  <div class="container inner">
+    <a class="brand" href="index.html"><span class="brand-mark">CC</span><span class="brand-name">Classy<span>Cash</span></span></a>
+    <nav class="nav">
+      <a href="index.html">Pulpit</a>
+      <a href="payments.html">Płatności</a>
+      <a href="modals.html">Modale</a>
+      <a href="settings-admin.html" class="active">Administracja</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container" style="padding: 32px 24px 80px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px">
+    <div>
+      <h1 style="font-size:28px">Panel skarbnika / administratora</h1>
+      <p style="color:var(--muted)">Pełna kontrola nad klasą 5B — użytkownicy, dzieci, integracje i ustawienia płatności.</p>
+    </div>
+    <div style="display:flex;gap:8px">
+      <button class="btn btn-outline">+ Zaproś użytkownika</button>
+      <a class="btn btn-primary" href="modals.html">+ Nowa zbiórka</a>
+    </div>
+  </div>
+
+  <div class="settings-layout">
+    <aside class="settings-nav">
+      <a href="#" class="active">👥 Użytkownicy</a>
+      <a href="#">🧒 Dzieci klasy</a>
+      <a href="#">💳 Metody płatności</a>
+      <a href="#">📧 Integracja Gmail</a>
+      <a href="#">🏫 Klasa i branding</a>
+      <a href="#">📤 Eksport danych</a>
+      <a href="#">📜 Dziennik aktywności</a>
+      <a href="#" style="color:var(--danger)">⚠️ Strefa krytyczna</a>
+    </aside>
+
+    <div style="display:flex;flex-direction:column;gap:24px">
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Użytkownicy klasy</h2>
+          <div style="display:flex;gap:8px">
+            <input class="input" placeholder="Szukaj użytkownika…" style="height:36px;font-size:13px" />
+            <a href="modals.html" class="btn btn-primary" style="padding:6px 14px;font-size:13px">+ Dodaj</a>
+          </div>
+        </div>
+        <div class="card-body" style="padding:0">
+          <table class="table">
+            <thead><tr><th>Użytkownik</th><th>Rola</th><th>Dzieci</th><th>Status</th><th>Akcje</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><span class="avatar">AK</span>Anna Kowalska<div style="font-size:12px;color:var(--muted);margin-left:42px">anna.k@example.com</div></td>
+                <td><span class="role-pill role-treasurer">Skarbnik</span></td>
+                <td>Janek, Zosia</td>
+                <td><span class="badge badge-success">Aktywny</span></td>
+                <td><a href="modals.html" style="color:var(--secondary);font-weight:600">Moderuj</a></td>
+              </tr>
+              <tr>
+                <td><span class="avatar" style="background:var(--accent);color:#3a2a00">PN</span>Piotr Nowak<div style="font-size:12px;color:var(--muted);margin-left:42px">p.nowak@example.com</div></td>
+                <td><span class="role-pill role-parent">Rodzic</span></td>
+                <td>Adam Nowak</td>
+                <td><span class="badge badge-success">Aktywny</span></td>
+                <td><a href="modals.html" style="color:var(--secondary);font-weight:600">Moderuj</a></td>
+              </tr>
+              <tr>
+                <td><span class="avatar">MW</span>Maria Wiśniewska<div style="font-size:12px;color:var(--muted);margin-left:42px">maria.w@example.com</div></td>
+                <td><span class="role-pill role-parent">Rodzic</span></td>
+                <td>Hania W.</td>
+                <td><span class="badge badge-warning">Zaproszony</span></td>
+                <td><a href="modals.html" style="color:var(--secondary);font-weight:600">Moderuj</a></td>
+              </tr>
+              <tr>
+                <td><span class="avatar" style="background:var(--danger)">MK</span>Marek Kowalski<div style="font-size:12px;color:var(--muted);margin-left:42px">m.kowalski@example.com</div></td>
+                <td><span class="role-pill role-admin">Administrator</span></td>
+                <td>Janek</td>
+                <td><span class="badge badge-danger">Zawieszony</span></td>
+                <td><a href="modals.html" style="color:var(--secondary);font-weight:600">Moderuj</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"><h2>Płatności klasy</h2></div>
+        <div class="card-body">
+          <div class="input-row">
+            <div class="form-group">
+              <label>Numer telefonu BLIK</label>
+              <input class="input" value="+48 600 123 456" />
+            </div>
+            <div class="form-group">
+              <label>Imię i nazwisko odbiorcy</label>
+              <input class="input" value="Anna Kowalska" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Numer rachunku bankowego (IBAN)</label>
+            <input class="input" value="PL 12 1140 2004 0000 3102 7654 3210" />
+          </div>
+          <div class="input-row">
+            <div class="form-group">
+              <label>Domyślna waluta</label>
+              <select class="select"><option>PLN</option><option>EUR</option></select>
+            </div>
+            <div class="form-group">
+              <label>Próg ostrzeżenia o zaległości</label>
+              <select class="select"><option>7 dni</option><option>14 dni</option><option>30 dni</option></select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Integracja Gmail (auto-księgowanie)</h2>
+          <span class="badge badge-success">Połączono</span>
+        </div>
+        <div class="card-body">
+          <p style="color:var(--muted);font-size:14px;margin-bottom:14px">Wpłaty z banku są automatycznie wykrywane i przypisywane do uczniów na podstawie tytułu przelewu.</p>
+          <div class="input-row">
+            <div class="form-group"><label>Adres Gmail</label><input class="input" value="kasa.klasy.5b@gmail.com" /></div>
+            <div class="form-group"><label>Hasło aplikacji</label><input class="input" type="password" value="••••••••••••" /></div>
+          </div>
+          <div style="display:flex;gap:8px">
+            <button class="btn btn-outline" style="font-size:13px;padding:6px 14px">Testuj połączenie</button>
+            <button class="btn btn-outline" style="font-size:13px;padding:6px 14px;color:var(--danger);border-color:var(--danger)">Odłącz</button>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;justify-content:flex-end;gap:10px">
+        <button class="btn btn-ghost">Anuluj</button>
+        <button class="btn btn-primary">Zapisz wszystkie zmiany</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site">© 2026 Classy Cash · Panel administratora</footer>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ustawienia konta — Classy Cash</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app-bg"></div>
+
+<header class="topmenu">
+  <div class="container inner">
+    <a class="brand" href="index.html"><span class="brand-mark">CC</span><span class="brand-name">Classy<span>Cash</span></span></a>
+    <nav class="nav">
+      <a href="index.html">Pulpit</a>
+      <a href="payments.html">Płatności</a>
+      <a href="settings-user.html" class="active">Moje konto</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container" style="padding: 32px 24px 80px">
+  <h1 style="font-size:28px">Ustawienia konta</h1>
+  <p style="color:var(--muted)">Zarządzaj swoim profilem rodzica, dziećmi i powiadomieniami.</p>
+
+  <div class="settings-layout">
+    <aside class="settings-nav">
+      <a href="#" class="active">👤 Profil</a>
+      <a href="#">🧒 Moje dzieci</a>
+      <a href="#">🔔 Powiadomienia</a>
+      <a href="#">💳 Metody płatności</a>
+      <a href="#">🔒 Bezpieczeństwo</a>
+      <a href="#" style="color:var(--danger)">🗑️ Usuń konto</a>
+    </aside>
+
+    <div style="display:flex;flex-direction:column;gap:24px">
+      <div class="card">
+        <div class="card-header"><h2>Profil</h2></div>
+        <div class="card-body">
+          <div style="display:flex;align-items:center;gap:18px;margin-bottom:24px">
+            <div class="avatar" style="width:72px;height:72px;font-size:24px">AK</div>
+            <div>
+              <button class="btn btn-outline" style="padding:6px 14px;font-size:13px">Zmień zdjęcie</button>
+              <div style="font-size:12px;color:var(--muted);margin-top:6px">PNG / JPG, max 2 MB</div>
+            </div>
+          </div>
+          <div class="input-row">
+            <div class="form-group"><label>Imię</label><input class="input" value="Anna" /></div>
+            <div class="form-group"><label>Nazwisko</label><input class="input" value="Kowalska" /></div>
+          </div>
+          <div class="input-row">
+            <div class="form-group"><label>E-mail</label><input class="input" value="anna.k@example.com" /></div>
+            <div class="form-group"><label>Telefon (BLIK)</label><input class="input" value="+48 600 123 456" /></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Moje dzieci</h2>
+          <button class="btn btn-primary" style="padding:6px 14px;font-size:13px">+ Dodaj dziecko</button>
+        </div>
+        <div class="card-body" style="padding:0">
+          <table class="table">
+            <thead><tr><th>Dziecko</th><th>Klasa</th><th>Nr</th><th>Drugi rodzic</th><th></th></tr></thead>
+            <tbody>
+              <tr><td><span class="avatar">JK</span>Janek Kowalski</td><td>5B</td><td>12</td><td>Marek Kowalski</td><td><a href="modals.html" style="color:var(--secondary);font-weight:600">Edytuj</a></td></tr>
+              <tr><td><span class="avatar" style="background:var(--accent);color:#3a2a00">ZK</span>Zosia Kowalska</td><td>2A</td><td>5</td><td>—</td><td><a href="modals.html" style="color:var(--secondary);font-weight:600">Edytuj</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"><h2>Preferencje powiadomień</h2></div>
+        <div class="card-body">
+          <label class="checkbox" style="display:flex;margin-bottom:10px"><input type="checkbox" checked /> E-mail o nowej zbiórce</label>
+          <label class="checkbox" style="display:flex;margin-bottom:10px"><input type="checkbox" checked /> Przypomnienie o terminie wpłaty</label>
+          <label class="checkbox" style="display:flex;margin-bottom:10px"><input type="checkbox" /> Tygodniowe podsumowanie salda klasy</label>
+          <label class="checkbox" style="display:flex"><input type="checkbox" checked /> Potwierdzenie zaksięgowania mojej wpłaty</label>
+        </div>
+      </div>
+
+      <div style="display:flex;justify-content:flex-end;gap:10px">
+        <button class="btn btn-ghost">Anuluj</button>
+        <button class="btn btn-primary">Zapisz zmiany</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site">© 2026 Classy Cash</footer>
+</body>
+</html>
