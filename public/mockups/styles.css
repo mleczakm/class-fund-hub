@@ -188,3 +188,63 @@ footer.site { text-align: center; padding: 40px 24px; color: var(--muted); font-
   .hero { padding: 32px; }
   .hero h1 { font-size: 30px; }
 }
+
+/* === Added: modals, dropdowns, notifications, settings, users table === */
+.modal-backdrop { position: fixed; inset: 0; background: rgba(15, 23, 42, .55); backdrop-filter: blur(4px); display: flex; align-items: flex-start; justify-content: center; padding: 80px 20px 40px; z-index: 50; overflow-y: auto; }
+.modal { background: #fff; border-radius: 18px; box-shadow: var(--shadow-elegant); width: 100%; max-width: 540px; overflow: hidden; }
+.modal.lg { max-width: 720px; }
+.modal-head { display: flex; justify-content: space-between; align-items: center; padding: 20px 24px; border-bottom: 1px solid var(--border); }
+.modal-head h3 { font-size: 18px; }
+.modal-head .close { background: none; border: 0; font-size: 22px; color: var(--muted); cursor: pointer; line-height: 1; }
+.modal-body { padding: 24px; }
+.modal-foot { padding: 16px 24px; border-top: 1px solid var(--border); display: flex; gap: 10px; justify-content: flex-end; background: #fafbfd; }
+
+/* page that showcases multiple modal cards inline */
+.modal-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.modal-grid > .modal { position: relative; max-width: none; }
+.modal-grid .modal::before { content: attr(data-label); position: absolute; top: -28px; left: 0; font-size: 12px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .12em; }
+@media (max-width: 900px) { .modal-grid { grid-template-columns: 1fr; } }
+
+/* dropdown menu */
+.dropdown { position: absolute; right: 0; top: calc(100% + 10px); width: 260px; background: #fff; border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--shadow-elegant); padding: 8px; z-index: 30; }
+.dropdown .dd-header { padding: 12px; border-bottom: 1px solid var(--border); margin-bottom: 6px; }
+.dropdown .dd-header strong { display: block; }
+.dropdown .dd-header span { font-size: 12px; color: var(--muted); }
+.dropdown a, .dropdown button { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 10px; font-size: 14px; color: var(--fg); background: none; border: 0; width: 100%; text-align: left; cursor: pointer; }
+.dropdown a:hover, .dropdown button:hover { background: #f3f5fa; }
+.dropdown .danger { color: var(--danger); }
+.dropdown hr { border: 0; border-top: 1px solid var(--border); margin: 6px 0; }
+.user-trigger { width: 38px; height: 38px; border-radius: 50%; background: var(--gradient-hero); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; cursor: pointer; border: 0; }
+.menu-wrap { position: relative; }
+.bell { position: relative; width: 38px; height: 38px; border-radius: 50%; background: #fff; border: 1px solid var(--border); cursor: pointer; }
+.bell .dot { position: absolute; top: 8px; right: 9px; width: 9px; height: 9px; border-radius: 50%; background: var(--danger); border: 2px solid #fff; }
+
+/* notification panel */
+.notif-panel { width: 380px; }
+.notif-item { display: flex; gap: 12px; padding: 14px 12px; border-radius: 10px; }
+.notif-item:hover { background: #f3f5fa; }
+.notif-item .ico { width: 36px; height: 36px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+.notif-item.success .ico { background: var(--secondary-soft); color: #1d7a5f; }
+.notif-item.warn .ico { background: #fff3d6; color: #8a6612; }
+.notif-item.info .ico { background: #e6ecf7; color: var(--primary); }
+.notif-item p { font-size: 14px; }
+.notif-item .when { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.notif-unread { position: absolute; right: 14px; top: 18px; width: 8px; height: 8px; border-radius: 50%; background: var(--secondary); }
+
+/* settings tabs */
+.settings-layout { display: grid; grid-template-columns: 240px 1fr; gap: 28px; margin-top: 32px; }
+.settings-nav { display: flex; flex-direction: column; gap: 4px; }
+.settings-nav a { padding: 10px 14px; border-radius: 10px; font-size: 14px; color: var(--muted); font-weight: 500; }
+.settings-nav a:hover { background: #f3f5fa; color: var(--fg); }
+.settings-nav a.active { background: var(--primary); color: #fff; }
+@media (max-width: 900px) { .settings-layout { grid-template-columns: 1fr; } }
+
+/* user table */
+.role-pill { font-size: 11px; padding: 3px 8px; border-radius: 999px; font-weight: 600; }
+.role-admin { background: #e6ecf7; color: var(--primary); }
+.role-treasurer { background: #fff3d6; color: #8a6612; }
+.role-parent { background: var(--secondary-soft); color: #1d7a5f; }
+.avatar { width: 32px; height: 32px; border-radius: 50%; background: var(--gradient-hero); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; margin-right: 10px; vertical-align: middle; }
+.row-user { display: flex; align-items: center; }
+
+.kbd-link { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: var(--secondary-soft); color: #1d7a5f; font-size: 12px; font-weight: 600; }
